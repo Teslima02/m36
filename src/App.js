@@ -11,7 +11,6 @@ import Layout from './components/layouts/layout1/Layout1';
 function App() {
     return (
       <React.Fragment>
-      <Layout>
         <CssBaseline />
         <Container maxWidth="lg">
           <Helmet>
@@ -28,7 +27,6 @@ function App() {
         <Widget2 />
         <Widget3 />
         <Widget4 />
-        </Layout>
       </React.Fragment>
     );
 }
