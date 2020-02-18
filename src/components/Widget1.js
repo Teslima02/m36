@@ -141,7 +141,7 @@ const Widget1 = () => {
 
   return (
     <React.Fragment>
-      <Grid container spacing={3} className={classes.root}>
+      <Grid container spacing={0} className={classes.root}>
         <Grid item xs={12} md={6} sm={6}>
           <div className={classes.W1HeaderWidth}>
             <Divider variant="fullWidth" className={classes.W1Divider} />
@@ -225,18 +225,7 @@ const Widget1 = () => {
             </List>
           </div>
         </Grid>
-        <Grid item xs={12} md={6} sm={6}>
-          {/* <Hidden mdDown>
-            <img
-              alt="group"
-              // eslint-disable-next-line camelcase
-              src={Group_3172}
-              className={classes.rightImage}
-            />
-
-            <img alt="imageOne" src={imageOne} className={classes.floatImage} />
-          </Hidden> */}
-
+        {/* <Grid item xs={12} md={6} sm={6}>
           <Hidden xlUp>
             <img
               alt="group"
@@ -247,18 +236,7 @@ const Widget1 = () => {
 
             <img alt="imageOne" src={imageOne} className={classes.floatImage} />
           </Hidden>
-
-          {/* <Hidden mdUp>
-            <img
-              alt="iPhoneMockup"
-              // eslint-disable-next-line camelcase
-              src={iPhoneMockup}
-              className={classes.rightImage}
-            />
-
-            <img alt="imageOne" src={imageOne} className={classes.floatImage} />
-          </Hidden> */}
-        </Grid>
+        </Grid> */}
       </Grid>
     </React.Fragment>
   );
