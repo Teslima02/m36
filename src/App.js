@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Helmet } from 'react-helmet';
+import { CssBaseline, Container } from '@material-ui/core';
 import './App.css';
+import Widget1 from './components/Widget1';
+import Widget2 from './components/Widget2';
+import Widget3 from './components/Widget3';
+import Widget4 from './components/Widget4';
+import Layout from './components/layouts/layout1/Layout1';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+      <React.Fragment>
+      <Layout>
+        <CssBaseline />
+        <Container maxWidth="lg">
+          <Helmet>
+            <title>Home Page</title>
+            <meta
+              name="description"
+              content="A React.js Boilerplate application homepage"
+            />
+          </Helmet>
+          {/* <Widget1 /> */}
+        </Container>
+  
+        <Widget1 />
+        <Widget2 />
+        <Widget3 />
+        <Widget4 />
+        </Layout>
+      </React.Fragment>
+    );
 }
 
 export default App;
