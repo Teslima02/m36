@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Grid, Button, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Banner from '../banner.jpg';
+import SubscriberDialog from '../../SubscriberDialog';
 
 const useStyles = makeStyles(theme => ({
   banner: {
@@ -48,7 +49,13 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const AppBanner = () => {
+  const [open, setOpen] = React.useState(false);
   const classes = useStyles();
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
   return (
     <Box component="div" className={classes.banner}>
       <Grid item xs={12} sm={12} md={12} className={classes.captionBox}>
@@ -72,6 +79,15 @@ const AppBanner = () => {
         >
           Get Started
         </Button>
+        <Button
+          variant="contained"
+          color="secondary"
+          className={classes.button}
+          onClick={() => handleClickOpen()}
+        >
+          Subscribe To Our App
+        </Button>
+        <SubscriberDialog open={open} setOpen={setOpen} />
       </Grid>
     </Box>
   );

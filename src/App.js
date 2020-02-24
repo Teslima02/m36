@@ -8,6 +8,7 @@ import Widget2 from './components/Widget2';
 import Widget3 from './components/Widget3';
 import Widget4 from './components/Widget4';
 import Header from './components/Header';
+import SubscriberDialog from './components/SubscriberDialog';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -19,7 +20,7 @@ function App() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <div className={classes.root}>
+      <div>
         <Helmet>
           <title>Home Page</title>
           <meta
