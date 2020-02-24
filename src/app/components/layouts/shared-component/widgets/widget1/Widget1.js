@@ -12,11 +12,11 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 // eslint-disable-next-line camelcase
-import Ellipse_2 from '../images/landing_page/Ellipse_2.svg';
+import Ellipse_2 from '../../../../../images/landing_page/Ellipse_2.svg';
 // eslint-disable-next-line camelcase
-import Group_3172 from '../images/landing_page/Group_3172.png';
-import iPhoneMockup from '../images/landing_page/iPhone-Mockup-Marcus.png';
-import imageOne from '../images/landing_page/1.png';
+import Group_3172 from '../../../../../images/landing_page/Group_3172.png';
+import iPhoneMockup from '../../../../../images/landing_page/iPhone-Mockup-Marcus.png';
+import imageOne from '../../../../../images/landing_page/1.png';
 
 const useStyles = makeStyles(theme => ({
   root: {

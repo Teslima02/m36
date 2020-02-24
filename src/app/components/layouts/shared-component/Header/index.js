@@ -158,7 +158,7 @@ function Header(props) {
       <AppBar position="absolute" color="inherit" className={classes.appBar}>
         <Toolbar>
           <Typography className={classes.logo} variant="h6" noWrap>
-            Blue
+            M36NG
           </Typography>
 
           <div className={classes.grow} />

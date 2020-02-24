@@ -1,11 +1,11 @@
 import React from 'react';
 import { Box, Container, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Beautiful from './assets/beautiful.jpg';
-import AppCard1 from './cards/Card-1';
-import AppCard2 from './cards/Card-2';
-import AppCard3 from './cards/Card-3';
-import AppDownloadButtons from './AppDownloadButtons';
+import Beautiful from './../../../../assets/beautiful.jpg';
+import AppCard1 from './components/cards/Card-1';
+import AppCard2 from './components/cards/Card-2';
+import AppCard3 from './components/cards/Card-3';
+import AppDownloadButtons from './components/AppDownloadButtons';
 
 const useStyles = makeStyles(theme => ({
    root: {
