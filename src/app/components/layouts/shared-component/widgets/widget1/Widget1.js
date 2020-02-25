@@ -10,6 +10,7 @@ import {
   Divider,
   Hidden,
 } from '@material-ui/core';
+import LensIcon from '@material-ui/icons/Lens';
 import { makeStyles } from '@material-ui/core/styles';
 // eslint-disable-next-line camelcase
 import Ellipse_2 from '../../../../../images/landing_page/Ellipse_2.svg';
@@ -24,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(2),
     [theme.breakpoints.down('md')]: {
       marginTop: theme.spacing(5),
-      // paddingLeft: theme.spacing(1),
+      // paddingLeft: console.log(theme),
     },
   },
   header: {
@@ -61,7 +62,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 'Bold',
     fontSize: '66px/78px',
     letterSpacing: '-0.79px',
-    color: theme.palette.secondary.dark,
+    color: theme.palette.primary.dark,
     opacity: 1,
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
@@ -79,18 +80,17 @@ const useStyles = makeStyles(theme => ({
     },
   },
   BulletImage: {
-    // eslint-disable-next-line camelcase
-    background: `transparent url(${Ellipse_2}) 0% 0 % no-repeat padding-box`,
     opacity: 1,
     width: '20px',
     height: '20px',
+    color: theme.palette.primary.main,
   },
   W1ListItemText: {
     textAlign: 'left',
     fontWeight: 'Bold',
     fontSize: '20px',
     letterSpacing: 0,
-    color: theme.palette.secondary.light,
+    color: theme.palette.primary.dark,
     opacity: 1,
     [theme.breakpoints.down('md')]: {
       fontSize: '10px',
@@ -157,14 +157,10 @@ const Widget1 = () => {
 
           <div className={classes.W1ContentWidth}>
             <List>
+            {/* LensIcon */}
               <ListItem>
                 <ListItemAvatar>
-                  <Avatar
-                    alt="Ellipse_2"
-                    // eslint-disable-next-line camelcase
-                    src={Ellipse_2}
-                    className={classes.BulletImage}
-                  />
+                  <LensIcon className={classes.BulletImage} />
                 </ListItemAvatar>
                 <ListItemText
                   classes={{ primary: classes.W1ListItemText }}
@@ -176,12 +172,7 @@ const Widget1 = () => {
             <List>
               <ListItem>
                 <ListItemAvatar>
-                  <Avatar
-                    alt="Ellipse_2"
-                    // eslint-disable-next-line camelcase
-                    src={Ellipse_2}
-                    className={classes.BulletImage}
-                  />
+                  <LensIcon className={classes.BulletImage} />
                 </ListItemAvatar>
                 <ListItemText
                   primary="Tie your life goals, family goals and business projects to lucrative investment products to gain maximally."
@@ -193,12 +184,7 @@ const Widget1 = () => {
             <List>
               <ListItem>
                 <ListItemAvatar>
-                  <Avatar
-                    alt="Ellipse_2"
-                    // eslint-disable-next-line camelcase
-                    src={Ellipse_2}
-                    className={classes.BulletImage}
-                  />
+                  <LensIcon className={classes.BulletImage} />
                 </ListItemAvatar>
                 <ListItemText
                   primary="All with the help of a Digital Concierge ready to guide you for reduced risk and better returns."
@@ -210,12 +196,7 @@ const Widget1 = () => {
             <List>
               <ListItem>
                 <ListItemAvatar>
-                  <Avatar
-                    alt="Ellipse_2"
-                    // eslint-disable-next-line camelcase
-                    src={Ellipse_2}
-                    className={classes.BulletImage}
-                  />
+                  <LensIcon className={classes.BulletImage} />
                 </ListItemAvatar>
                 <ListItemText
                   primary="Create investment goals at the click of a button."

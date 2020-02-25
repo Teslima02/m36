@@ -6,12 +6,19 @@ const themesConfig = {
         palette: {
             type     : 'light',
             primary  : {
-                main: '#93a847'
+                main: '#fced00',
+                light: '#a69d11eb',
+                dark: '#101012',
             },
             secondary: {
                 light: green[400],
                 main : green[700],
                 dark : green[900]
+            },
+            text: {
+                primary: '#fced00',
+                secondary : green[700],
+                light : green[900]
             },
             error    : {
                 main: red[800]

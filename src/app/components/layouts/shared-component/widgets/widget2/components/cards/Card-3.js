@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
             lineHeight: '30px',
             fontSize: '21px',
             fontWeight: 600,
-            color: '#5C6E7D',
+            color: theme.palette.primary.dark,
             textAlign: 'left' 
         },
         '& h2': {
@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
             fontWeight: theme.typography.fontWeightBold
         },
         '& hr': {
-            backgroundColor: '#A8BF54',
+            backgroundColor: theme.palette.primary.light,
             width: '90px',
             height: 3,
         }

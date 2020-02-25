@@ -10,7 +10,7 @@ import Widget4 from './components/Widget4';
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    backgroundColor: '#344655',
+    backgroundColor: theme.palette.primary.dark,
     display: 'flex',
     flexDirection: 'column',
   },

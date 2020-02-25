@@ -37,11 +37,12 @@ const useStyles = makeStyles(theme => ({
         }
     },
     header: {
-        color: theme.palette.secondary.main,
+        color: theme.palette.primary.dark,
         marginBottom: theme.spacing(1)
     },
     button: {
-        backgroundColor: '#A8BF54',
+        backgroundColor: theme.palette.primary.main,
+        color: theme.palette.primary.dark,
         padding: theme.spacing(1, 6),
         borderRadius: theme.shape.borderRadius,
         boxShadow: theme.shadows[0],
@@ -50,7 +51,7 @@ const useStyles = makeStyles(theme => ({
         textTransform: 'capitalize',
         fontSize: 16,
         '&:hover': {
-            backgroundColor: '#93a847',
+            backgroundColor: theme.palette.primary.light,
         },
     },
     box: {

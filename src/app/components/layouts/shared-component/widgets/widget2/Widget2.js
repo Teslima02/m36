@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
       justifyContent: 'center',
       fontWeight: 800,
       margin: theme.spacing(5,0),
-      color: theme.palette.secondary.dark,
+      color: theme.palette.primary.dark,
       [theme.breakpoints.down('md')]: {
          display: 'flex',
       }

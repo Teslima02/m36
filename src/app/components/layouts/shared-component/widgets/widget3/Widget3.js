@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
       }
    },
    header: {
-      color: theme.palette.secondary.dark,
+      color: theme.palette.primary.dark,
       marginTop: theme.spacing(3),
       fontWeight: 900,
       [theme.breakpoints.down('md')]: {
@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
       }
    },
    content: {
-      color: theme.palette.grey[800],
+      color: theme.palette.primary.dark,
       marginBottom: theme.spacing(3),
       fontWeight: 600
    },
@@ -43,15 +43,19 @@ const useStyles = makeStyles(theme => ({
       marginTop: theme.spacing(4),
       textTransform: 'capitalize',
       fontSize: theme.typography.htmlFontSize,
+      color: theme.palette.primary.dark,
       '&:hover': {
-        backgroundColor: darken(theme.palette.primary.main, 0.1)
+        backgroundColor: theme.palette.primary.light,
       }
    },
    chart: {
       height: '320px',
       margin: '0 auto',
       display: 'flex',
-   }
+   },
+   typoText: {
+      color: theme.palette.primary.dark,
+   },
 }));
 
 const Widget3 = () => {
@@ -90,7 +94,7 @@ const Widget3 = () => {
                   </Grid>
 
                   <Grid item xs={12} sm={12} md={12}>
-                     <Typography align="center" variant="h5" component="h5">
+                     <Typography align="center" variant="h5" component="h5" className={classes.typoText}>
                         Keep track of your investments as they grow
                      </Typography>
                   </Grid>

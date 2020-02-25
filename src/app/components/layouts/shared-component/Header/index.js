@@ -99,6 +99,19 @@ const styles = theme => ({
       display: 'block',
     },
   },
+  logos: {
+    height: 200,
+    width: 200,
+    display: 'none',
+    marginLeft: 10,
+    [theme.breakpoints.up('sm')]: {
+      display: 'block',
+      height: 200,
+      width: 200,
+      marginTop: -40,
+      marginLeft: 10,
+    },
+  },
 });
 
 function Header(props) {
@@ -159,8 +172,8 @@ function Header(props) {
       <AppBar position="absolute" color="inherit" className={classes.appBar}>
         <Toolbar>
           <Typography className={classes.logo} variant="h6" noWrap>
-            {/* <img src={M36} alt="" /> */}
-            M36NG
+            <img src={M36} className={classes.logos} alt="" />
+            {/* M36NG */}
           </Typography>
 
           <div className={classes.grow} />

@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
         backgroundImage: `url(${Googleplay})`
     },
     caption: {
-        color: theme.palette.primary.main,
+        color: theme.palette.primary.dark,
         textTransform: 'uppercase',
         fontSize: theme.typography.fontSize
     },
@@ -47,9 +47,9 @@ const useStyles = makeStyles(theme => ({
         justifyContent: 'center',
         fontWeight: 800,
         margin: theme.spacing(5,0),
-        color: theme.palette.primary.main,
+        color: theme.palette.primary.dark,
         [theme.breakpoints.down('md')]: {
-           display: 'flex'
+           display: 'flex',
         }
     }
 }));

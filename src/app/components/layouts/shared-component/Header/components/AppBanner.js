@@ -65,7 +65,8 @@ const useStyles = makeStyles(theme => ({
     },
   },
   button: {
-    backgroundColor: '#A8BF54',
+    color: theme.palette.primary.dark,
+    backgroundColor: theme.palette.primary.main,
     padding: theme.spacing(1, 6),
     borderRadius: theme.shape.borderRadius,
     opacity: 1,
@@ -73,7 +74,7 @@ const useStyles = makeStyles(theme => ({
     textTransform: 'capitalize',
     fontSize: 16,
     '&:hover': {
-      backgroundColor: '#93a847',
+      backgroundColor: theme.palette.primary.light,
     },
   },
 }));
