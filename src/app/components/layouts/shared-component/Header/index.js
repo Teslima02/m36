@@ -21,6 +21,7 @@ import Home from '@material-ui/icons/Home';
 import PersonAdd from '@material-ui/icons/PersonAdd';
 import ExitToApp from '@material-ui/icons/ExitToApp';
 import AppBanner from './components/AppBanner';
+import M36 from './../../../assets/m36.svg'
 
 const styles = theme => ({
   appBar: {
@@ -158,7 +159,8 @@ function Header(props) {
       <AppBar position="absolute" color="inherit" className={classes.appBar}>
         <Toolbar>
           <Typography className={classes.logo} variant="h6" noWrap>
-            Blue
+            {/* <img src={M36} alt="" /> */}
+            M36NG
           </Typography>
 
           <div className={classes.grow} />

@@ -12,11 +12,11 @@ import {
     CardMedia
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Heart from './assets/heart.svg'
-import Beach from './assets/beach.svg'
-import Child from './assets/child.svg'
-import Piggy from './assets/piggy.svg'
-import Ring from './assets/ring.svg'
+import Heart from './../../../../assets/heart.svg'
+import Beach from './../../../../assets/beach.svg'
+import Child from './../../../../assets/child.svg'
+import Piggy from './../../../../assets/piggy.svg'
+import Ring from './../../../../assets/ring.svg'
 
 const useStyles = makeStyles(theme => ({
     root: {
