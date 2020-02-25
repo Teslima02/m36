@@ -6,7 +6,6 @@ import Banner from '../banner.jpg';
 import SubscriberDialog from '../../SubscriberDialog';
 import Appstore from './../../../../assets/appstore.jpg'
 import Googleplay from './../../../../assets/googleplay.jpg'
-import AppDownloadButton from '../../widgets/widget2/components/AppDownloadButtons';
 
 const useStyles = makeStyles(theme => ({
   caption: {
