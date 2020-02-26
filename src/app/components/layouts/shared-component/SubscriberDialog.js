@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from 'react';
+import React from 'react';
 import {
   Divider,
   TextField,
@@ -8,11 +8,23 @@ import {
   DialogTitle,
   DialogContent,
   DialogActions,
-  Typography,
-  MenuItem,
+  Snackbar,
   Slide,
 } from '@material-ui/core';
+import MuiAlert from '@material-ui/lab/Alert';
+import Firebase, { withFirebase } from '../../Firebase';
+
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
 const useStyles = makeStyles(theme => ({
+  root: {
+    width: '100%',
+    '& > * + *': {
+      marginTop: theme.spacing(2),
+    },
+  },
   container: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -26,21 +38,39 @@ const useStyles = makeStyles(theme => ({
   menu: {
     width: 200,
   },
+  input: {
+    color: "black"
+  },
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
+const CustomizedSnackbars = props => {
+  const classes = useStyles();
+  return (
+    <div className={classes.root}>
+      <Snackbar open={props.openClick} autoHideDuration={6000} onClose={props.handleClose}>
+        <Alert onClose={props.handleClose} severity="success">
+          Thanks for subscribing for our application you will receive an email to install our application. Thanks
+        </Alert>
+      </Snackbar>
+    </div>
+  );
+}
+
 const SubscriberDialog = props => {
   const { setOpen, open } = props;
 
   const classes = useStyles();
+  const [valueClick, setValueClick] = React.useState(false);
   const [values, setValues] = React.useState({
     fullname: '',
     email: '',
   });
 
+  // close modal function
   const handleClickClose = () => {
     setOpen(false);
   };
@@ -57,6 +87,30 @@ const SubscriberDialog = props => {
     return fullname !== '' && email !== '';
   };
 
+
+  // function to submit subscriber information
+  const onSubmit = event => {
+    props.firebase.subscriberData(event);
+
+    // snackbar open function
+    setValueClick(true);
+
+    // close modal function
+    handleClickClose();
+  };
+
+  // snackbar close function
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setValueClick(false);
+  };
+
+  if (valueClick === true) {
+    return <CustomizedSnackbars openClick={valueClick} handleClose={handleClose} />
+  }
   return (
     <div>
       <Dialog
@@ -83,6 +137,12 @@ const SubscriberDialog = props => {
               onChange={handleChange('fullname')}
               margin="normal"
               fullWidth
+              InputProps={{
+                className: classes.input
+              }}
+              InputLabelProps={{
+                className: classes.input,
+              }}
             />
             <TextField
               id="email"
@@ -100,7 +160,7 @@ const SubscriberDialog = props => {
         <DialogActions>
           <Button
             onClick={() => {
-              // dispatchCreateNewPositionAction(values);
+              onSubmit(values);
             }}
             color="primary"
             variant="contained"
@@ -121,4 +181,4 @@ const SubscriberDialog = props => {
   );
 };
 
-export default SubscriberDialog
+export default withFirebase(SubscriberDialog)

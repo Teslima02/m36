@@ -16,8 +16,8 @@ const themesConfig = {
                 dark : green[900]
             },
             text: {
-                primary: '#fced00',
-                secondary : green[700],
+                primary: '#101012',
+                secondary : '#101012',
                 light : green[900]
             },
             error    : {
