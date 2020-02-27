@@ -10,13 +10,23 @@ import AppDownloadButtons from './components/AppDownloadButtons';
 const useStyles = makeStyles(theme => ({
    root: {
       flexGrow: 1,
-      backgroundColor: theme.palette.grey[100],
+      // backgroundColor: theme.palette.white,
       '& h6': {
          fontWeight: 700
-      }
+      },
+      // [theme.breakpoints.down('md')]: {
+      //    backgroundColor: theme.palette.grey[100],
+      // },
+   },
+   download: {
+      flexGrow: 1,
+      // backgroundColor: theme.palette.white,
+      '& h6': {
+         fontWeight: 700
+      },
    },
    banner: {
-      minHeight: '768px',
+      minHeight: '968px',
       backgroundImage: `url(${Beautiful})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center center',
@@ -43,13 +53,13 @@ const Widget2 = () => {
    const classes = useStyles();
    return (
       <React.Fragment>
-         <Box className={classes.root} py={4}>
+         <Box className={classes.download} py={4}>
             <Container maxWidth="md">
                <AppDownloadButtons />
             </Container>
          </Box>
 
-         <Box>
+         <Box className={classes.root}>
             <Typography gutterBottom variant="h4" component="h2" className={classes.header}>
                What We Offer
             </Typography>

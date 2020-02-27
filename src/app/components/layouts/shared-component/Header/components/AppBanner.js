@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
     backgroundImage: `url(${Googleplay})`
   },
   banner: {
-    minHeight: '680px',
+    minHeight: '980px',
     backgroundImage: `url(${Banner})`,
     backgroundSize: 'cover',
     backgroundPosition: 'top center',
@@ -50,7 +50,8 @@ const useStyles = makeStyles(theme => ({
     left: 75,
   },
   text: {
-    fontSize: 50,
+    fontSize: 70,
+    fontWeight: 'Bold',
     [theme.breakpoints.down('md')]: {
       lineHeight: 1,
       marginBottom: theme.spacing(2),
@@ -58,7 +59,8 @@ const useStyles = makeStyles(theme => ({
   },
   strapline: {
     fontSize: 23,
-    fontWeight: 200,
+    fontWeight: 'normal',
+    // fontWeight: 200,
     color: '#E5E5E5',
     [theme.breakpoints.down('md')]: {
       fontSize: 18,
@@ -73,6 +75,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(2),
     textTransform: 'capitalize',
     fontSize: 16,
+    fontWeight: 'Bold',
     '&:hover': {
       backgroundColor: theme.palette.primary.light,
     },
@@ -105,21 +108,24 @@ const AppBanner = () => {
           <br /> and makes you money while doing it.{' '}
           </Typography>
 
-          <br />
+          {/* <br /> */}
 
-          <Typography variant="subtitle2" className={classNames(classes.caption, classes.hide)}>DOWNLOAD NOW ON</Typography>
+          {/* <Typography variant="subtitle2" className={classNames(classes.caption, classes.hide)}>DOWNLOAD NOW ON</Typography>
           <Grid item xs={12} sm={6} md={6} className={classes.box}>
             <IconButton aria-label="appstore" className={classNames(classes.media, classes.appstore)} />
             <Typography variant="subtitle2" component="h6" className={classes.hide}>{<br />}</Typography>
             <IconButton aria-label="googleplay" className={classNames(classes.media, classes.googleplay)} />
-          </Grid>
+          </Grid> */}
+
+          <br />
+          <br />
           <Button
             variant="contained"
             color="secondary"
             className={classes.button}
             onClick={() => handleClickOpen()}
           >
-            Subscribe To Our App
+            Get Started
           </Button>
           <SubscriberDialog open={open} setOpen={setOpen} />
         </Grid>

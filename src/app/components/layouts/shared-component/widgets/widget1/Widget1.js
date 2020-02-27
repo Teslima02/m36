@@ -49,10 +49,10 @@ const useStyles = makeStyles(theme => ({
   },
   W1Divider: {
     border: `3px solid ${theme.palette.primary.main}`,
-    marginRight: '200px',
+    marginRight: 390,
     opacity: 1,
     [theme.breakpoints.down('md')]: {
-      border: `1px solid ${theme.palette.primary.main}`,
+      border: `3px solid ${theme.palette.primary.main}`,
       marginLeft: '10px',
       marginRight: '10px',
     },
@@ -69,7 +69,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('md')]: {
       textAlign: 'center',
       fontWeight: 'Bold',
-      fontSize: ' 15px',
+      fontSize: ' 20px',
       letterSpacing: '-0.32px',
     },
   },
@@ -88,13 +88,17 @@ const useStyles = makeStyles(theme => ({
   W1ListItemText: {
     textAlign: 'left',
     fontWeight: 'Bold',
-    fontSize: '20px',
+    fontSize: 30,
     letterSpacing: 0,
     color: theme.palette.primary.dark,
     opacity: 1,
     [theme.breakpoints.down('md')]: {
-      fontSize: '10px',
+      fontSize: '15px',
     },
+  },
+  textSpace: {
+    marginTop: 50,
+    marginBottom: 50,
   },
   rightImage: {
     marginTop: '-130px',
@@ -151,13 +155,12 @@ const Widget1 = () => {
               align="left"
               className={classes.W1Header}
             >
-              {"Personalized to meet you where you're at"}
+              Personalized to meet you <br /> where you're at
             </Typography>
           </div>
 
           <div className={classes.W1ContentWidth}>
-            <List>
-            {/* LensIcon */}
+            <List className={classes.textSpace}>
               <ListItem>
                 <ListItemAvatar>
                   <LensIcon className={classes.BulletImage} />
@@ -169,7 +172,7 @@ const Widget1 = () => {
               </ListItem>
             </List>
 
-            <List>
+            <List className={classes.textSpace}>
               <ListItem>
                 <ListItemAvatar>
                   <LensIcon className={classes.BulletImage} />
@@ -181,7 +184,7 @@ const Widget1 = () => {
               </ListItem>
             </List>
 
-            <List>
+            <List className={classes.textSpace}>
               <ListItem>
                 <ListItemAvatar>
                   <LensIcon className={classes.BulletImage} />
@@ -193,7 +196,7 @@ const Widget1 = () => {
               </ListItem>
             </List>
 
-            <List>
+            <List className={classes.textSpace}>
               <ListItem>
                 <ListItemAvatar>
                   <LensIcon className={classes.BulletImage} />

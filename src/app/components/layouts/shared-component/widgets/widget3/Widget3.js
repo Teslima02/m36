@@ -9,6 +9,7 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 import {darken, lighten} from '@material-ui/core/styles/colorManipulator';
 import Chart from './../../../../assets/chart.svg'
+// import Chart from './../../../../assets/Group_3096.svg'
 
 const useStyles = makeStyles(theme => ({
    root: {

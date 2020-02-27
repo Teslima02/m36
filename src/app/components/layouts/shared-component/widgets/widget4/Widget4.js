@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
         },
         '& h6': {
             fontWeight: 700,
-            color: '#5C6E7D',
+            // color: '#5C6E7D',
             lineHeight: '21px'
         }
     },
@@ -74,6 +74,9 @@ const useStyles = makeStyles(theme => ({
         backgroundSize: 'contain',
         margin: '30px auto',
         // paddingTop: '56.25%', // 16:9
+    },
+    content: {
+        color: theme.palette.primary.dark,
     },
 }));
 

@@ -4,6 +4,13 @@ import './styles/index.css';
 import App from './app/App';
 import * as serviceWorker from './serviceWorker';
 import Firebase, { FirebaseContext } from './app/components/Firebase';
+import WebFont from 'webfontloader';
+
+WebFont.load({
+  google: {
+    families: ['Quicksand', 'sans-serif']
+  }
+});
 
 ReactDOM.render(
     <FirebaseContext.Provider value={new Firebase()}>
