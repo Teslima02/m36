@@ -42,18 +42,27 @@ const useStyles = makeStyles(theme => ({
     backgroundPosition: 'top center',
     position: 'relative',
     overflow: 'hidden',
+    [theme.breakpoints.down('md')]: {
+      minHeight: '680px',
+    },
   },
   captionBox: {
     color: theme.palette.common.white,
     position: 'absolute',
     bottom: 100,
     left: 75,
+    margin: 70,
+    [theme.breakpoints.down('md')]: {
+      margin: 0,
+    }
   },
   text: {
     fontSize: 70,
     fontWeight: 'Bold',
     [theme.breakpoints.down('md')]: {
-      lineHeight: 1,
+      // lineHeight: 1,
+      fontSize: 40,
+      textAlign: 'center',
       marginBottom: theme.spacing(2),
     },
   },
@@ -64,6 +73,7 @@ const useStyles = makeStyles(theme => ({
     color: '#E5E5E5',
     [theme.breakpoints.down('md')]: {
       fontSize: 18,
+      textAlign: 'center',
     },
   },
   button: {
@@ -78,6 +88,16 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 'Bold',
     '&:hover': {
       backgroundColor: theme.palette.primary.light,
+    },
+  },
+  largeButton: {
+    margin: theme.spacing(1, 6, 1, 6),
+  },
+  centerButton: {
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
   },
 }));
@@ -119,14 +139,20 @@ const AppBanner = () => {
 
           <br />
           <br />
-          <Button
-            variant="contained"
-            color="secondary"
-            className={classes.button}
-            onClick={() => handleClickOpen()}
-          >
-            Get Started
-          </Button>
+          <div className={classes.centerButton}>
+            <Button
+              variant="contained"
+              color="secondary"
+              className={classes.button}
+              onClick={() => handleClickOpen()}
+            >
+              <Typography
+                className={classes.largeButton}
+              >
+                Get Started
+          </Typography>
+            </Button>
+          </div>
           <SubscriberDialog open={open} setOpen={setOpen} />
         </Grid>
       </Grid>

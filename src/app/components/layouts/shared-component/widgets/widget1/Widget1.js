@@ -48,6 +48,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   W1Divider: {
+    marginLeft: 60,
     border: `3px solid ${theme.palette.primary.main}`,
     marginRight: 390,
     opacity: 1,
@@ -58,6 +59,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   W1Header: {
+    marginLeft: 60,
     textAlign: 'left',
     fontWeight: 'Bold',
     fontSize: '66px/78px',
@@ -67,6 +69,7 @@ const useStyles = makeStyles(theme => ({
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
     [theme.breakpoints.down('md')]: {
+      marginLeft: 0,
       textAlign: 'center',
       fontWeight: 'Bold',
       fontSize: ' 20px',
@@ -74,18 +77,20 @@ const useStyles = makeStyles(theme => ({
     },
   },
   W1ContentWidth: {
-    paddingLeft: theme.spacing(4),
-    [theme.breakpoints.down('sm')]: {
-      paddingLeft: theme.spacing(1),
+    marginLeft: theme.spacing(12),
+    [theme.breakpoints.down('md')]: {
+      marginLeft: theme.spacing(1),
     },
   },
   BulletImage: {
+    // marginLeft: 60,
     opacity: 1,
     width: '20px',
     height: '20px',
     color: theme.palette.primary.main,
   },
   W1ListItemText: {
+    // marginLeft: 20,
     textAlign: 'left',
     fontWeight: 'Bold',
     fontSize: 30,
@@ -136,6 +141,11 @@ const useStyles = makeStyles(theme => ({
       width: '150px',
       top: '2025px',
       left: '40px',
+    },
+  },
+  textFormat: {
+    [theme.breakpoints.down('md')]: {
+      margin: 100,
     },
   },
 }));

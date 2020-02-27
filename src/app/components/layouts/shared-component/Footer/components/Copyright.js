@@ -21,7 +21,7 @@ const Copyright = () => {
     <React.Fragment>
       <Grid item xs={12} className={classes.footer}>
         <Typography variant="body2" align="left" className={classes.header}>
-          Copyright © 2019 Blue
+          {`Copyright © ${new Date().getFullYear()} M36NG`}
         </Typography>
       </Grid>
     </React.Fragment>

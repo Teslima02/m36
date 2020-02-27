@@ -93,7 +93,7 @@ const styles = theme => ({
   logo: {
     display: 'none',
     color: '#1F70C1',
-    marginLeft: 50,
+    marginLeft: 80,
     font: '300 36px Bahnschrift',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
