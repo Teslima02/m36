@@ -47,10 +47,10 @@ const Widget4 = () => {
           }
         >
           <ListItem button className={classes.link} component="a">
-            <ListItemText primary="+234 10 235 8000" />
+            <ListItemText primary="+234 7000 0500 500" />
           </ListItem>
           <ListItem button className={classes.link} component="a">
-            <ListItemText primary="admin@blue.com" />
+            <ListItemText primary="support@m36ng.com" />
           </ListItem>
         </List>
       </Grid>
