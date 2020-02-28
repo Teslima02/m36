@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
         minHeight: 220,
         position: 'absolute',
         top: 190,
-        left: 515,
+        left: 245,
         borderRadius: 10,
         padding: theme.spacing(5),
         [theme.breakpoints.down('md')]: {
@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
             lineHeight: '30px',
             fontSize: '24px',
             fontWeight: 600,
-            color: theme.palette.primary.dark,
+            color: theme.palette.grey[500],
             textAlign: 'left',
             marginTop: 30,
         },
@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
         }
     },
     head: {
-        color: theme.palette.primary.main,
+        color: theme.palette.primary.dark,
     },
 }));
 

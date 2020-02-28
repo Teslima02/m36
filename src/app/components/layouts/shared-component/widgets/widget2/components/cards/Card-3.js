@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
     card: {
         maxWidth: 400,
         minHeight: 220,
-        left: 400,
+        left: 130,
         marginBottom: 150,
         position: 'absolute',
         bottom: 0,
@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
             lineHeight: '30px',
             fontSize: '24px',
             fontWeight: 600,
-            color: theme.palette.primary.dark,
+            color: theme.palette.grey[500],
             textAlign: 'left',
             marginTop: 30,
         },
@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
         }
     },
     head: {
-        color: theme.palette.primary.main,
+        color: theme.palette.primary.dark,
     },
 }));
 

@@ -72,7 +72,7 @@ const useStyles = makeStyles(theme => ({
       marginLeft: 0,
       textAlign: 'center',
       fontWeight: 'Bold',
-      fontSize: ' 20px',
+      fontSize: 30,
       letterSpacing: '-0.32px',
     },
   },
@@ -98,12 +98,16 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.primary.dark,
     opacity: 1,
     [theme.breakpoints.down('md')]: {
-      fontSize: '15px',
+      fontSize: '20px',
     },
   },
   textSpace: {
     marginTop: 50,
     marginBottom: 50,
+    [theme.breakpoints.down('md')]: {
+      marginTop: 10,
+      marginBottom: 10,
+    },
   },
   rightImage: {
     marginTop: '-130px',

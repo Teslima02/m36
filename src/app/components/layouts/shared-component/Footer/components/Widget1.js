@@ -46,7 +46,7 @@ const Widget1 = () => {
             </ListSubheader>
           }
         >
-          <ListItem button className={classes.link} component="a">
+          {/* <ListItem button className={classes.link} component="a">
             <ListItemText primary="About Us" />
           </ListItem>
           <ListItem button className={classes.link} component="a">
@@ -54,7 +54,7 @@ const Widget1 = () => {
           </ListItem>
           <ListItem button className={classes.link} component="a">
             <ListItemText primary="Terms & Conditions" />
-          </ListItem>
+          </ListItem> */}
         </List>
       </Grid>
     </React.Fragment>
